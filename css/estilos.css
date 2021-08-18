@@ -1667,3 +1667,6 @@ a.itm_miga:hover {
   padding: 16px 0;
   position: relative;
 }
+.img_perfil_coment {
+  border-radius: 50%;
+}
