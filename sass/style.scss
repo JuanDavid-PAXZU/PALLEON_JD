@@ -1,0 +1,60 @@
+.section_login{
+    width: 100%;
+    padding: 48px 0;
+    background: url(../images/diseno/bg_test_1.png) no-repeat left bottom, url(../images/diseno/bg_test_2.png) no-repeat bottom right;
+    background-color: #E5E5E5;
+    background-blend-mode: multiply;
+    margin-top: -44px;
+    padding: 100px 0;
+
+    h2{
+        margin-bottom: 30px;
+        font-weight: 600;
+        font-size: 30px;
+        color: #000;
+    }
+}
+.cont_gen_login{
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    background: #FFF;
+    padding: 30px;
+    box-sizing: border-box;
+
+    .form_login{
+        h3{
+            font-size: 20px;
+            font-weight: 600;
+            color: #54C2B9;
+            text-transform: uppercase;
+        }
+        .txt_form_login{
+            margin:20px auto;
+            max-width: 400px;
+        }
+        .cont_inputs{
+            width: 100%;
+            max-width: 300px;
+            margin: auto;
+        }
+    }
+}
+.input_field{
+    width: 100%;
+    border: 1px solid #7CEFE6;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    position: relative;
+
+    input{
+        height: 35px;
+    }
+    label{
+        position: absolute;
+        top: 7px;
+        font-size: 14px;
+        color: #666666;
+        left: 10px;
+    }
+}
