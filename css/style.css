@@ -114,4 +114,12 @@
   background: #FFF;
   color: #54C2B9;
 }
+
+.cont_notas_recomendadas .colum_list_cursos {
+  width: 100%;
+}
+
+.cont_notas_recomendadas .colum_list_cursos .cont_paginas_list_cursos .itm_curso {
+  width: 23%;
+}
 /*# sourceMappingURL=style.css.map */

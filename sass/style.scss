@@ -103,3 +103,14 @@
 
 // ESTILOS INTERNA MI PERFIL
 
+.cont_notas_recomendadas{
+    .colum_list_cursos{
+        width: 100%;
+
+        .cont_paginas_list_cursos{
+            .itm_curso{
+                width: 23%;
+            }
+        }
+    }
+}
