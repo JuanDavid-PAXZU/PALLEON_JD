@@ -5,7 +5,7 @@
   background-color: #E5E5E5;
   background-blend-mode: multiply;
   margin-top: -44px;
-  padding: 100px 0;
+  padding: 40px 0 100px;
 }
 
 .section_login h2 {
@@ -20,9 +20,22 @@
   max-width: 600px;
   margin: auto;
   background: #FFF;
-  padding: 30px;
+  padding: 80px 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.cont_gen_login .form_login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cont_gen_login .form_login h3 {
@@ -43,6 +56,26 @@
   margin: auto;
 }
 
+.cont_gen_login .form_login .link_btn {
+  margin-bottom: 20px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto 20px;
+}
+
+.cont_gen_login .form_login .link_btn:hover {
+  text-decoration: underline;
+  color: #6850FF;
+}
+
+.cont_gen_login .form_login .btn.btn_form {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+}
+
 .input_field {
   width: 100%;
   border: 1px solid #7CEFE6;
@@ -59,7 +92,26 @@
   position: absolute;
   top: 7px;
   font-size: 14px;
-  color: #666666;
+  color: #7e7e7e;
   left: 10px;
+  background: transparent;
+  padding: 0 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: text;
+}
+
+.input_field:focus-within input + label {
+  font-size: 12px;
+  top: -11px;
+  background: #FFF;
+  color: #54C2B9;
+}
+
+.input_field:not(:focus-within) input:not(:placeholder-shown) + label {
+  font-size: 12px;
+  top: -11px;
+  background: #FFF;
+  color: #54C2B9;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,5 @@
+// ESTILOS INTERNA LOGIN
+
 .section_login{
     width: 100%;
     padding: 48px 0;
@@ -5,7 +7,7 @@
     background-color: #E5E5E5;
     background-blend-mode: multiply;
     margin-top: -44px;
-    padding: 100px 0;
+    padding: 40px 0 100px;
 
     h2{
         margin-bottom: 30px;
@@ -19,10 +21,14 @@
     max-width: 600px;
     margin: auto;
     background: #FFF;
-    padding: 30px;
+    padding: 80px 30px;
     box-sizing: border-box;
 
     .form_login{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
         h3{
             font-size: 20px;
             font-weight: 600;
@@ -36,6 +42,20 @@
         .cont_inputs{
             width: 100%;
             max-width: 300px;
+            margin: auto;
+        }
+        .link_btn{
+            margin-bottom: 20px;
+            width: max-content;
+            margin: 0 auto 20px;
+
+            &:hover{
+                text-decoration: underline;
+                color: #6850FF;
+            }
+        }
+        .btn.btn_form{
+            width: max-content;
             margin: auto;
         }
     }
@@ -54,7 +74,32 @@
         position: absolute;
         top: 7px;
         font-size: 14px;
-        color: #666666;
+        color: #7e7e7e;
         left: 10px;
+        background: transparent;
+        padding: 0 4px;
+        box-sizing: border-box;
+        cursor: text;
     }
+
+    &:focus-within{
+        input + label{         
+                font-size: 12px;
+                top: -11px;
+                background: #FFF;
+                color: #54C2B9;
+        }
+    }
+
+    &:not(:focus-within) input:not(:placeholder-shown) + label{
+        font-size: 12px;
+        top: -11px;
+        background: #FFF;
+        color: #54C2B9;
+    }
+
 }
+
+
+// ESTILOS INTERNA MI PERFIL
+
