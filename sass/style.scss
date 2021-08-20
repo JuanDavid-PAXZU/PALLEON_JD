@@ -43,6 +43,10 @@
             width: 100%;
             max-width: 300px;
             margin: auto;
+
+            label{
+                background: #FFF;
+            }
         }
         .link_btn{
             margin-bottom: 20px;
@@ -67,8 +71,37 @@
     border-radius: 3px;
     position: relative;
 
+    textarea{
+        height: 100px;
+        width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
+        position: relative;
+        padding-top: 10px;
+        text-align: left;
+        
+        &:focus{
+            + label{         
+                    font-size: 12px;
+                    top: -11px;
+                    background: #F3F7F8;
+                    color: #54C2B9;
+            }
+        }
+    
+        &:not(:focus) + label, &:not(:placeholder-shown) + label{
+            font-size: 12px;
+            top: -11px;
+            background: #F3F7F8;
+            color: #54C2B9;
+        }
+    }
+
     input{
         height: 35px;
+        width: 100%;
+        padding: 0 16px;
+        box-sizing: border-box;
     }
     label{
         position: absolute;
@@ -86,7 +119,7 @@
         input + label{         
                 font-size: 12px;
                 top: -11px;
-                background: #FFF;
+                background: #F3F7F8;
                 color: #54C2B9;
         }
     }
@@ -94,14 +127,140 @@
     &:not(:focus-within) input:not(:placeholder-shown) + label{
         font-size: 12px;
         top: -11px;
-        background: #FFF;
+        background: #F3F7F8;
         color: #54C2B9;
     }
 
 }
 
-
 // ESTILOS INTERNA MI PERFIL
+
+.profile_section{
+    background: #F3F7F8;
+}
+.cont_dates_profile{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+
+    .profile{
+        width: 100%;
+
+        &.p_photo{
+            max-width: 200px;
+            max-height: 200px;
+            width: 100%;
+            position: relative;
+
+            img{
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 200px;
+                z-index: 1;
+            }
+            .pick_photo{
+                position: absolute;
+                z-index: 2;
+                width: 40px;
+                height: 40px;
+                border-radius: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #6850FF;
+                cursor: pointer;
+                right: 10px;
+                bottom: 10px;
+
+                &::before{
+                    content: '';
+                    background: url('../images/diseno/-perfil/photo-camera.svg')no-repeat center;
+                    height: 18px;
+                    width: 18px;
+                    position: absolute;
+                    inset: 0;
+                    margin: auto;
+                    color: #FFF;
+                    fill: #FFF;
+                }
+            }
+        }
+
+        &.p_dates_inputs{
+            width: 100%;
+
+            .col2_input{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+
+                .input_field{
+                    margin-bottom: 12px;
+                }
+            }
+        }
+        &.p_categories{
+            width: 40%;
+
+            h4{
+                margin-bottom: 10px;
+                font-size: 15px;
+                text-align: left;
+            }
+
+            .cont_cat_int{
+                background: #FFF;
+                padding: 10px;
+                box-sizing: border-box;
+                border-radius: 4px;
+
+                option{
+                    display: flex;
+                    justify-content: flex-start;
+
+                    input{
+                        margin: 0 20px 0 0;
+                    }
+                    label{
+                        width: 100%;
+                        text-align: left;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cont_tit_profile{
+    display: block;
+    margin: 20px 0;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        border-bottom: 1px solid #D2D2D2;
+        width: 100%;
+        left: 0;
+        top: calc(50%);
+        z-index: 1;
+
+    }
+    .tits_h2, .tits_h4{
+        position: relative;
+        text-align: left;
+        z-index: 2;
+        background: #FFF;
+        width: max-content;
+        padding: 0 20px 0 0;
+        box-sizing: border-box;
+        font-weight: 400;
+    }
+}
 
 .cont_notas_recomendadas{
     .colum_list_cursos{

@@ -56,6 +56,10 @@
   margin: auto;
 }
 
+.cont_gen_login .form_login .cont_inputs label {
+  background: #FFF;
+}
+
 .cont_gen_login .form_login .link_btn {
   margin-bottom: 20px;
   width: -webkit-max-content;
@@ -84,8 +88,37 @@
   position: relative;
 }
 
+.input_field textarea {
+  height: 100px;
+  width: 100%;
+  padding: 0 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  padding-top: 10px;
+  text-align: left;
+}
+
+.input_field textarea:focus + label {
+  font-size: 12px;
+  top: -11px;
+  background: #F3F7F8;
+  color: #54C2B9;
+}
+
+.input_field textarea:not(:focus) + label, .input_field textarea:not(:placeholder-shown) + label {
+  font-size: 12px;
+  top: -11px;
+  background: #F3F7F8;
+  color: #54C2B9;
+}
+
 .input_field input {
   height: 35px;
+  width: 100%;
+  padding: 0 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .input_field label {
@@ -104,15 +137,169 @@
 .input_field:focus-within input + label {
   font-size: 12px;
   top: -11px;
-  background: #FFF;
+  background: #F3F7F8;
   color: #54C2B9;
 }
 
 .input_field:not(:focus-within) input:not(:placeholder-shown) + label {
   font-size: 12px;
   top: -11px;
-  background: #FFF;
+  background: #F3F7F8;
   color: #54C2B9;
+}
+
+.profile_section {
+  background: #F3F7F8;
+}
+
+.cont_dates_profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 20px;
+}
+
+.cont_dates_profile .profile {
+  width: 100%;
+}
+
+.cont_dates_profile .profile.p_photo {
+  max-width: 200px;
+  max-height: 200px;
+  width: 100%;
+  position: relative;
+}
+
+.cont_dates_profile .profile.p_photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 200px;
+  z-index: 1;
+}
+
+.cont_dates_profile .profile.p_photo .pick_photo {
+  position: absolute;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #6850FF;
+  cursor: pointer;
+  right: 10px;
+  bottom: 10px;
+}
+
+.cont_dates_profile .profile.p_photo .pick_photo::before {
+  content: '';
+  background: url("../images/diseno/-perfil/photo-camera.svg") no-repeat center;
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  color: #FFF;
+  fill: #FFF;
+}
+
+.cont_dates_profile .profile.p_dates_inputs {
+  width: 100%;
+}
+
+.cont_dates_profile .profile.p_dates_inputs .col2_input {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.cont_dates_profile .profile.p_dates_inputs .col2_input .input_field {
+  margin-bottom: 12px;
+}
+
+.cont_dates_profile .profile.p_categories {
+  width: 40%;
+}
+
+.cont_dates_profile .profile.p_categories h4 {
+  margin-bottom: 10px;
+  font-size: 15px;
+  text-align: left;
+}
+
+.cont_dates_profile .profile.p_categories .cont_cat_int {
+  background: #FFF;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.cont_dates_profile .profile.p_categories .cont_cat_int option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.cont_dates_profile .profile.p_categories .cont_cat_int option input {
+  margin: 0 20px 0 0;
+}
+
+.cont_dates_profile .profile.p_categories .cont_cat_int option label {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+.cont_tit_profile {
+  display: block;
+  margin: 20px 0;
+  position: relative;
+}
+
+.cont_tit_profile::before {
+  content: '';
+  position: absolute;
+  border-bottom: 1px solid #D2D2D2;
+  width: 100%;
+  left: 0;
+  top: calc(50%);
+  z-index: 1;
+}
+
+.cont_tit_profile .tits_h2, .cont_tit_profile .tits_h4 {
+  position: relative;
+  text-align: left;
+  z-index: 2;
+  background: #FFF;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0 20px 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 400;
 }
 
 .cont_notas_recomendadas .colum_list_cursos {
