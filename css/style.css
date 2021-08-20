@@ -251,6 +251,44 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 4px;
+  max-height: 167px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.cont_dates_profile .profile.p_categories .cont_cat_int::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.cont_dates_profile .profile.p_categories .cont_cat_int::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+
+.cont_dates_profile .profile.p_categories .cont_cat_int::-webkit-scrollbar-thumb {
+  background: #6850ff;
+  border: 0px none #ffffff;
+  border-radius: 100px;
+}
+
+.cont_dates_profile .profile.p_categories .cont_cat_int::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+
+.cont_dates_profile .profile.p_categories .cont_cat_int::-webkit-scrollbar-track {
+  background: #e9e9e9;
+  border: 0px none #ffffff;
+  border-radius: 43px;
+}
+
+.cont_dates_profile .profile.p_categories .cont_cat_int::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+
+.cont_dates_profile .profile.p_categories .cont_cat_int::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 .cont_dates_profile .profile.p_categories .cont_cat_int option {
@@ -260,16 +298,38 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-bottom: 4px;
 }
 
-.cont_dates_profile .profile.p_categories .cont_cat_int option input {
-  margin: 0 20px 0 0;
+.cont_dates_profile .profile.p_categories .cont_cat_int option input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  content: '';
+  border-radius: 100px;
+  background: #DADADA;
+  width: 24px;
+  height: 20px;
+  position: relative;
+  margin-left: auto;
+}
+
+.cont_dates_profile .profile.p_categories .cont_cat_int option input[type=checkbox]:checked::before {
+  content: '';
+  position: absolute;
+  background: url("../images/diseno/-perfil/check.svg") no-repeat center;
+  background-color: #4FB80F;
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
 }
 
 .cont_dates_profile .profile.p_categories .cont_cat_int option label {
   width: 100%;
   text-align: left;
   cursor: pointer;
+  margin-left: 20px;
+  font-size: 14px;
 }
 
 .cont_tit_profile {
@@ -292,7 +352,7 @@
   position: relative;
   text-align: left;
   z-index: 2;
-  background: #FFF;
+  background: #F3F7F8;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;

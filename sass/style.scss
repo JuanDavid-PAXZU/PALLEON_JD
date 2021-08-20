@@ -216,18 +216,71 @@
                 padding: 10px;
                 box-sizing: border-box;
                 border-radius: 4px;
+                max-height: 167px;
+                height: 100%;
+                overflow-x: hidden;
+                overflow-y: scroll;
+
+                &::-webkit-scrollbar {
+                  width: 8px;
+                  height: 8px;
+                }
+                &::-webkit-scrollbar-button {
+                  width: 0px;
+                  height: 0px;
+                }
+                &::-webkit-scrollbar-thumb {
+                  background: #6850ff;
+                  border: 0px none #ffffff;
+                  border-radius: 100px;
+                }
+                &::-webkit-scrollbar-thumb:active {
+                  background: #000000;
+                }
+                &::-webkit-scrollbar-track {
+                  background: #e9e9e9;
+                  border: 0px none #ffffff;
+                  border-radius: 43px;
+                }
+                &::-webkit-scrollbar-track:active {
+                  background: #333333;
+                }
+                &::-webkit-scrollbar-corner {
+                  background: transparent;
+                }
 
                 option{
                     display: flex;
                     justify-content: flex-start;
+                    margin-bottom: 4px;
 
-                    input{
-                        margin: 0 20px 0 0;
+                    input[type=checkbox]{
+                        appearance: none;
+                        content: '';
+                        border-radius: 100px;
+                        background: #DADADA;
+                        width: 24px;
+                        height: 20px;
+                        position: relative;
+                        margin-left: auto;
+
+                        &:checked::before{
+                                content: '';
+                                position: absolute;
+                                background: url('../images/diseno/-perfil/check.svg')no-repeat center;
+                                background-color: #4FB80F;
+                                width: 20px;
+                                height: 20px;
+                                border-radius: 100px;
+                            }
                     }
+
                     label{
                         width: 100%;
                         text-align: left;
                         cursor: pointer;
+                        margin-left: 20px;
+                        font-size: 14px;
                     }
                 }
             }
@@ -254,7 +307,7 @@
         position: relative;
         text-align: left;
         z-index: 2;
-        background: #FFF;
+        background: #F3F7F8;
         width: max-content;
         padding: 0 20px 0 0;
         box-sizing: border-box;
