@@ -291,7 +291,7 @@
   background: transparent;
 }
 
-.cont_dates_profile .profile.p_categories .cont_cat_int option {
+.cont_dates_profile .profile.p_categories .cont_cat_int div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,7 +301,7 @@
   margin-bottom: 4px;
 }
 
-.cont_dates_profile .profile.p_categories .cont_cat_int option input[type=checkbox] {
+.cont_dates_profile .profile.p_categories .cont_cat_int div input[type=checkbox] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -314,7 +314,7 @@
   margin-left: auto;
 }
 
-.cont_dates_profile .profile.p_categories .cont_cat_int option input[type=checkbox]:checked::before {
+.cont_dates_profile .profile.p_categories .cont_cat_int div input[type=checkbox]:checked::before {
   content: '';
   position: absolute;
   background: url("../images/diseno/-perfil/check.svg") no-repeat center;
@@ -324,7 +324,7 @@
   border-radius: 100px;
 }
 
-.cont_dates_profile .profile.p_categories .cont_cat_int option label {
+.cont_dates_profile .profile.p_categories .cont_cat_int div label {
   width: 100%;
   text-align: left;
   cursor: pointer;
@@ -362,11 +362,57 @@
   font-weight: 400;
 }
 
+.cont_notas_recomendadas {
+  padding-bottom: 60px;
+}
+
 .cont_notas_recomendadas .colum_list_cursos {
   width: 100%;
+  padding: 0;
 }
 
 .cont_notas_recomendadas .colum_list_cursos .cont_paginas_list_cursos .itm_curso {
   width: 23%;
+}
+
+.section_cont_miscursos {
+  width: 100%;
+}
+
+.section_cont_miscursos .cont_paginas_list_cursos {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.tit_miscursos {
+  position: relative;
+}
+
+.tit_miscursos h3 {
+  text-align: left;
+  display: block;
+  margin: 20px 0;
+  padding-right: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  color: #282828;
+  background: #F3F7F8;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  font-weight: 600;
+}
+
+.tit_miscursos::before {
+  content: '';
+  position: absolute;
+  border-bottom: 1px solid #D2D2D2;
+  width: 100%;
+  left: 0;
+  top: calc(50%);
+  z-index: 1;
 }
 /*# sourceMappingURL=style.css.map */
